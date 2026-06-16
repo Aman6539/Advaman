@@ -63,10 +63,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
 
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:0 4rem;overflow:hidden;background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%)}
-.hero-photo{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center 30%;opacity:0.16;filter:saturate(0.4) sepia(0.15)}
-.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(120deg,var(--cream) 0%,rgba(252,250,245,0.85) 35%,rgba(252,250,245,0.55) 60%,rgba(252,250,245,0.2) 100%)}
-.hero-grid-line{position:absolute;inset:0;background-image:linear-gradient(90deg,transparent 49.9%,var(--line) 50%,transparent 50.1%);opacity:0.5;pointer-events:none}
-.hero-deco{position:absolute;right:6%;top:50%;transform:translateY(-50%);font-size:24rem;color:var(--gold-pale);pointer-events:none;z-index:1;font-family:'Cormorant Garamond',serif;line-height:1}
+.hero-accent-line{position:absolute;right:8%;top:18%;bottom:18%;width:1px;background:linear-gradient(180deg,transparent,var(--line) 20%,var(--line) 80%,transparent)}
+.hero-accent-dot{position:absolute;right:calc(8% - 4px);top:18%;width:9px;height:9px;border-radius:50%;background:var(--gold)}
 .hero-content{position:relative;z-index:2;max-width:720px}
 .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;animation:fadeUp 0.8s ease both}
 .hero-eyebrow span{font-size:0.74rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);font-weight:600}
@@ -93,7 +91,6 @@ section{position:relative;z-index:2}
 .section-divider{width:60px;height:1px;background:var(--gold);margin:1.6rem auto 0}
 
 .about-section{padding:6.5rem 4rem;background:var(--offwhite);position:relative;overflow:hidden;border-top:1px solid var(--line)}
-.about-photo-accent{position:absolute;top:0;right:0;width:38%;height:100%;background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.07;filter:saturate(0.3) sepia(0.2);pointer-events:none}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1140px;margin:0 auto;align-items:center}
 .about-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:600;color:var(--ink);line-height:1.18;margin-bottom:1.6rem}
 .about-left h2 em{font-style:italic;color:var(--gold-dark)}
@@ -277,7 +274,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.65);padding:3rem 4rem 1.5r
 
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
-  .hero{padding:8rem 1.5rem 4rem}.hero-deco{display:none}
+  .hero{padding:8rem 1.5rem 4rem}.hero-accent-line,.hero-accent-dot{display:none}
   .about-section,.practice-section,.locations-section,.blog-section,.reviews-section,.contact-section{padding:4rem 1.5rem}
   .about-grid,.contact-inner{grid-template-columns:1fr;gap:3rem}
   .practice-grid{grid-template-columns:1fr}
@@ -318,10 +315,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.65);padding:3rem 4rem 1.5r
 </nav>
 
 <section class="hero" id="home">
-  <div class="hero-photo"></div>
-  <div class="hero-photo-overlay"></div>
-  <div class="hero-grid-line"></div>
-  <div class="hero-deco">⚖</div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-accent-dot"></div>
   <div class="hero-content">
     <div class="hero-eyebrow">
       <div class="eyebrow-line"></div>
@@ -340,7 +335,6 @@ footer{background:var(--ink);color:rgba(255,255,255,0.65);padding:3rem 4rem 1.5r
 </section>
 
 <section class="about-section" id="about">
-  <div class="about-photo-accent"></div>
   <div class="about-grid">
     <div class="about-left">
       <span class="section-tag">About Advocate Aman Sharma</span>
